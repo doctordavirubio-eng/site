@@ -663,6 +663,10 @@ img {
     transition: var(--transition-smooth);
 }
 
+#about-card-dentist .about-card-img {
+    object-position: center top;
+}
+
 .about-card:hover .about-card-img {
     transform: scale(1.05);
 }
