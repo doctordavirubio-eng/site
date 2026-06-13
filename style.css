@@ -551,9 +551,32 @@ img {
 .hero-actions {
     display: flex;
     gap: 16px;
-    margin-bottom: 48px;
+    margin-bottom: 30px; /* Reduced to balance with image margin */
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.hero-doctor-img-wrapper {
+    margin-top: 10px;
+    margin-bottom: 48px;
+    max-width: 380px;
+    width: 100%;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 4px solid white;
+    transition: var(--transition-smooth);
+}
+
+.hero-doctor-img-wrapper:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-doctor-img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .hero-stats {
