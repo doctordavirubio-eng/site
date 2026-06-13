@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Davi Rubio | Odontologia Especializada</title>
+    <meta name="description" content="Consultório odontológico do Dr. Davi Rubio em São Paulo - Vila Ré. Mais de 40 anos de experiência oferecendo tratamentos de excelência com inovação, empatia e tecnologia para a sua saúde bucal.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+    <!-- Banner Superior (Aviso / WhatsApp Rápido) -->
+    <div class="top-announcement-bar">
+        <div class="container announcement-content">
+            <span class="announcement-text"><i class="fa-solid fa-calendar-check pulse-icon"></i> Agende sua consulta hoje mesmo!</span>
+            <a href="https://wa.me/5511944741003?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta+com+o+Dr.+Davi+Rubio." target="_blank" class="announcement-btn btn-whatsapp" id="top-bar-whatsapp-btn">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp: (11) 94474-1003
+            </a>
+        </div>
+    </div>
+
+    <!-- Cabeçalho Principal (Navegação) -->
+    <header class="main-header" id="main-header">
+        <div class="container header-container">
+            <a href="#home" class="logo-area" id="header-logo-link">
+                <div class="logo-image-wrapper">
+                    <img src="assets/images/logo_icon.png?v=2" alt="Dr. Davi Rubio Logo" class="logo-img animate-logo" id="main-logo">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">Dr. Davi Rubio</span>
+                    <span class="logo-subtitle">Odontologia Especializada</span>
+                </div>
+            </a>
+            
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" id="menu-toggle-btn">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="primary-navigation" id="primary-navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#saude-bucal" class="nav-link">Tratamento</a></li>
+                    <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+                    <li><a href="#faq" class="nav-link">Dúvidas</a></li>
+                    <li><a href="#contato" class="nav-link nav-btn" id="nav-contact-btn">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Capa do Site (Banner Principal com GIF de Capa) -->
+    <section class="site-cover-banner" id="home">
+        <div class="cover-gif-container">
+            <img src="assets/images/gif_de_capa.gif?v=2" alt="Dr. Davi Rubio Banner" class="cover-gif" id="cover-gif">
+        </div>
+    </section>
+
+    <!-- Seção de Introdução (Logo Abaixo da Capa) -->
+    <section class="intro-section">
+        <div class="container intro-container text-center">
+            <div class="badge">Atendimento de Excelência</div>
+            <h1 class="hero-title">Mais que um tratamento, o cuidado que o seu <span>sorriso merece</span>.</h1>
+            <p class="hero-description">
+                Unindo a tradição de mais de <strong>40 anos de experiência</strong> à inovação tecnológica. Oferecemos um atendimento focado na sua saúde bucal e bem-estar integral, em um ambiente moderno e acolhedor.
+            </p>
+            <div class="hero-actions">
+                <a href="https://wa.me/5511944741003?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta+com+o+Dr.+Davi+Rubio." target="_blank" class="btn btn-primary" id="hero-cta-btn">
+                    <i class="fa-brands fa-whatsapp"></i> Agendar Consulta
+                </a>
+                <a href="#sobre" class="btn btn-secondary" id="hero-more-btn">Saber Mais</a>
+            </div>
+            
+            <!-- Estatísticas Rápidas -->
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">40+</span>
+                    <span class="stat-label">Anos de Experiência</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10k+</span>
+                    <span class="stat-label">Sorrisos Cuidados</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Foco no Paciente</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre / Profissional -->
+    <section class="about-section" id="sobre">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Profissional & Infraestrutura</span>
+                <h2 class="section-title">Nossa Dedicação à Sua Saúde</h2>
+                <p class="section-description-top">Conheça um pouco mais sobre o profissional que cuidará do seu sorriso e a nossa estrutura equipada para lhe receber.</p>
+            </div>
+            
+            <div class="about-grid">
+                <!-- Card 1: O Consultório -->
+                <div class="about-card" id="about-card-office">
+                    <div class="about-card-img-wrapper">
+                        <img src="assets/images/consultorio.png?v=2" alt="Nosso Consultório" class="about-card-img">
+                    </div>
+                    <div class="about-card-body">
+                        <div class="about-card-icon"><i class="fa-solid fa-house-medical"></i></div>
+                        <h3>Consultório Moderno</h3>
+                        <p>
+                            Em meu consultório, ofereço mais do que apenas um espaço equipado com as mais avançadas tecnologias. Aqui você encontra um ambiente aconchegante, projetado para proporcionar o máximo de conforto, segurança e tranquilidade durante todos os seus procedimentos.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Card 2: O Dentista -->
+                <div class="about-card" id="about-card-dentist">
+                    <div class="about-card-img-wrapper">
+                        <img src="assets/images/doutor.png?v=2" alt="Dr. Davi Rubio" class="about-card-img">
+                    </div>
+                    <div class="about-card-body">
+                        <div class="about-card-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                        <h3>Dr. Davi Rubio</h3>
+                        <p>
+                            Não sou apenas um especialista em minha área de atuação, mas também estou em constante aprimoramento, acompanhando as mais recentes pesquisas e técnicas para garantir os melhores resultados. Destaco-me pela empatia e dedicação personalizada para cuidar de cada paciente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Tratamento e Saúde Bucal (com Slider Antes/Depois) -->
+    <section class="treatment-section" id="saude-bucal">
+        <div class="container">
+            <div class="treatment-grid">
+                <!-- Informações sobre Saúde Bucal -->
+                <div class="treatment-info">
+                    <span class="section-subtitle">Prevenção e Tratamento</span>
+                    <h2 class="section-title">A Importância da Saúde Bucal</h2>
+                    <p class="treatment-text">
+                        A saúde bucal desempenha um papel crucial não apenas na nossa capacidade de sorrir com confiança, mas também na nossa saúde e bem-estar gerais. A boca é a porta de entrada para o nosso corpo, e a sua saúde está intrinsecamente ligada ao funcionamento adequado de todo o organismo.
+                    </p>
+                    <p class="treatment-text">
+                        Problemas gengivais ou infecções não tratadas podem afetar outros sistemas do corpo. Por isso, a prevenção é o melhor caminho para manter sua saúde geral sempre em dia.
+                    </p>
+                    
+                    <ul class="treatment-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Consultas periódicas evitam tratamentos complexos</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Profilaxia (limpeza) profissional a cada 6 meses</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Detecção precoce de cáries e problemas na gengiva</li>
+                    </ul>
+                    
+                    <div class="treatment-cta">
+                        <a href="https://wa.me/5511944741003?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+limpeza+com+o+Dr.+Davi+Rubio." target="_blank" class="btn btn-primary" id="treatment-cta-btn">
+                            <i class="fa-solid fa-clock"></i> Agende sua Limpeza
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Carrossel de Fotos Antes & Depois -->
+                <div class="treatment-interactive">
+                    <div class="interactive-card">
+                        <div class="interactive-card-header">
+                            <h4>Demonstração de Profilaxia</h4>
+                            <p>Confira alguns resultados reais de antes e depois</p>
+                        </div>
+                        
+                        <!-- Carrossel de Antes e Depois Autoplay -->
+                        <div class="prophylaxis-carousel" id="prophylaxis-carousel">
+                            <div class="prophylaxis-carousel-inner">
+                                <div class="prophylaxis-slide active">
+                                    <img src="assets/images/antes_e_depois_1.jpg?v=2" alt="Demonstração Antes e Depois 1">
+                                </div>
+                                <div class="prophylaxis-slide">
+                                    <img src="assets/images/antes_e_depois_2.jpg?v=2" alt="Demonstração Antes e Depois 2">
+                                </div>
+                                <div class="prophylaxis-slide">
+                                    <img src="assets/images/antes_e_depois_3.jpg?v=2" alt="Demonstração Antes e Depois 3">
+                                </div>
+                            </div>
+                            
+                            <!-- Indicadores do Carrossel -->
+                            <div class="prophylaxis-indicators" id="prophylaxis-indicators">
+                                <span class="prophylaxis-dot active" data-slide="0"></span>
+                                <span class="prophylaxis-dot" data-slide="1"></span>
+                                <span class="prophylaxis-dot" data-slide="2"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos (Testimonials - Imagens das avaliações do Google) -->
+    <section class="testimonials-section" id="depoimentos">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Avaliações Google</span>
+                <h2 class="section-title">O que dizem os nossos pacientes</h2>
+                <p class="section-description-top">Mais de 40 anos de carinho e sorrisos transformados. Confira os depoimentos reais deixados no Google.</p>
+            </div>
+            
+            <div class="testimonials-carousel-wrapper">
+                <div class="testimonials-slider-track-container">
+                    <div class="testimonials-slider-track" id="testimonials-track">
+                        <!-- Card Depoimento 1 -->
+                        <div class="testimonial-img-card">
+                            <img src="assets/images/depoimento1.png?v=2" alt="Avaliação de Iomar Aiza no Google" loading="lazy">
+                        </div>
+                        <!-- Card Depoimento 2 -->
+                        <div class="testimonial-img-card">
+                            <img src="assets/images/depoimento2.png?v=2" alt="Avaliação de Thaina de Paula no Google" loading="lazy">
+                        </div>
+                        <!-- Card Depoimento 3 -->
+                        <div class="testimonial-img-card">
+                            <img src="assets/images/depoimento3.png?v=2" alt="Avaliação de Marcelo Araujo no Google" loading="lazy">
+                        </div>
+                        <!-- Card Depoimento 4 -->
+                        <div class="testimonial-img-card">
+                            <img src="assets/images/depoimento4.png?v=2" alt="Avaliação de Paulo Lima no Google" loading="lazy">
+                        </div>
+                        <!-- Card Depoimento 5 -->
+                        <div class="testimonial-img-card">
+                            <img src="assets/images/depoimento5.png?v=2" alt="Avaliação no Google" loading="lazy">
+                        </div>
+                        <!-- Card Depoimento 6 -->
+                        <div class="testimonial-img-card">
+                            <img src="assets/images/depoimento6.png?v=2" alt="Avaliação no Google" loading="lazy">
+                        </div>
+                        <!-- Card Depoimento 7 -->
+                        <div class="testimonial-img-card">
+                            <img src="assets/images/depoimento7.png?v=2" alt="Avaliação no Google" loading="lazy">
+                        </div>
+                        <!-- Card Depoimento 8 -->
+                        <div class="testimonial-img-card">
+                            <img src="assets/images/depoimento8.png?v=2" alt="Avaliação no Google" loading="lazy">
+                        </div>
+                        <!-- Card Depoimento 9 -->
+                        <div class="testimonial-img-card">
+                            <img src="assets/images/depoimento9.png?v=2" alt="Avaliação no Google" loading="lazy">
+                        </div>
+                        <!-- Card Depoimento 10 -->
+                        <div class="testimonial-img-card">
+                            <img src="assets/images/depoimento10.png?v=2" alt="Avaliação no Google" loading="lazy">
+                        </div>
+                        <!-- Card Depoimento 11 -->
+                        <div class="testimonial-img-card">
+                            <img src="assets/images/depoimento11.png?v=2" alt="Avaliação no Google" loading="lazy">
+                        </div>
+                        <!-- Card Depoimento 12 -->
+                        <div class="testimonial-img-card">
+                            <img src="assets/images/depoimento12.png?v=2" alt="Avaliação no Google" loading="lazy">
+                        </div>
+                        <!-- Card Depoimento 12 Alt -->
+                        <div class="testimonial-img-card">
+                            <img src="assets/images/depoimento12_2.png?v=2" alt="Avaliação no Google" loading="lazy">
+                        </div>
+                        <!-- Card Depoimento 13 -->
+                        <div class="testimonial-img-card">
+                            <img src="assets/images/depoimento13.png?v=2" alt="Avaliação no Google" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Controles do Carrossel -->
+                <div class="carousel-controls">
+                    <button class="carousel-control-btn prev" id="carousel-prev-btn" aria-label="Depoimentos anteriores">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <div class="carousel-indicators" id="carousel-indicators">
+                        <!-- Os indicadores (dots) serão preenchidos dinamicamente via Javascript -->
+                    </div>
+                    <button class="carousel-control-btn next" id="carousel-next-btn" aria-label="Próximos depoimentos">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Banner Chamada de Ação Intermediário -->
+    <section class="cta-banner-section">
+        <div class="container cta-banner-container">
+            <h2>Vem garantir o melhor tratamento para você e sua família.</h2>
+            <p>Clique abaixo e fale diretamente conosco no WhatsApp para tirar dúvidas ou agendar.</p>
+            <a href="https://wa.me/5511944741003?text=Ol%C3%A1%2C+gostaria+de+saber+mais+informa%C3%A7%C3%B5es+sobre+os+tratamentos." target="_blank" class="btn btn-light" id="banner-cta-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Conversar no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção Perguntas Frequentes (FAQ) -->
+    <section class="faq-section" id="faq">
+        <div class="container faq-container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Dúvidas Comuns</span>
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <p class="section-description-top">Tem dúvidas sobre a saúde bucal ou visitas ao dentista? Confira as respostas abaixo.</p>
+            </div>
+            
+            <div class="faq-accordion">
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item" id="faq-item-1">
+                    <button class="accordion-header" aria-expanded="false" id="faq-btn-1">
+                        <span class="faq-question">1. O que é odontologia?</span>
+                        <span class="faq-icon-wrapper"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+                    <div class="accordion-collapse">
+                        <div class="accordion-body">
+                            <p>
+                                A odontologia é a área da saúde que se dedica ao estudo, diagnóstico, prevenção e tratamento das doenças relacionadas aos dentes, gengivas, boca e estruturas adjacentes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item" id="faq-item-2">
+                    <button class="accordion-header" aria-expanded="false" id="faq-btn-2">
+                        <span class="faq-question">2. Qual a importância da odontologia para a saúde geral?</span>
+                        <span class="faq-icon-wrapper"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+                    <div class="accordion-collapse">
+                        <div class="accordion-body">
+                            <p>
+                                A saúde bucal está intimamente ligada à saúde geral do indivíduo. Problemas dentários e gengivais podem contribuir para condições como doenças cardíacas, diabetes e complicações na gravidez. Além disso, uma boa saúde bucal é essencial para a mastigação adequada, a fala e a autoestima.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item" id="faq-item-3">
+                    <button class="accordion-header" aria-expanded="false" id="faq-btn-3">
+                        <span class="faq-question">3. Com que frequência devo visitar um dentista?</span>
+                        <span class="faq-icon-wrapper"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+                    <div class="accordion-collapse">
+                        <div class="accordion-body">
+                            <p>
+                                Recomenda-se que adultos e crianças visitem o dentista a cada seis meses para exames de rotina e limpezas profissionais. No entanto, a frequência pode variar dependendo das necessidades individuais e das condições bucais específicas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item" id="faq-item-4">
+                    <button class="accordion-header" aria-expanded="false" id="faq-btn-4">
+                        <span class="faq-question">4. O que é uma cárie dental?</span>
+                        <span class="faq-icon-wrapper"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+                    <div class="accordion-collapse">
+                        <div class="accordion-body">
+                            <p>
+                                Uma cárie dental é uma deterioração dos tecidos dentários causada pela ação das bactérias presentes na placa bacteriana. Se não tratada, pode levar à dor, infecção e perda do dente afetado.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="accordion-item" id="faq-item-5">
+                    <button class="accordion-header" aria-expanded="false" id="faq-btn-5">
+                        <span class="faq-question">5. Como prevenir cáries e outras doenças bucais?</span>
+                        <span class="faq-icon-wrapper"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+                    <div class="accordion-collapse">
+                        <div class="accordion-body">
+                            <p>
+                                A prevenção de cáries e doenças bucais inclui práticas diárias de higiene oral, como escovação dos dentes pelo menos duas vezes ao dia, uso de fio dental diariamente, alimentação balanceada e limitação do consumo de açúcar. Além disso, é essencial visitar regularmente o dentista para exames e limpezas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="accordion-item" id="faq-item-6">
+                    <button class="accordion-header" aria-expanded="false" id="faq-btn-6">
+                        <span class="faq-question">6. Quais são os tratamentos disponíveis para clareamento dental?</span>
+                        <span class="faq-icon-wrapper"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+                    <div class="accordion-collapse">
+                        <div class="accordion-body">
+                            <p>
+                                Existem vários tratamentos para clareamento dental, incluindo métodos de consultório realizados pelo dentista e produtos de clareamento caseiros. O método mais adequado depende das preferências individuais e das condições bucais de cada paciente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="accordion-item" id="faq-item-7">
+                    <button class="accordion-header" aria-expanded="false" id="faq-btn-7">
+                        <span class="faq-question">7. O que é periodontite?</span>
+                        <span class="faq-icon-wrapper"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+                    <div class="accordion-collapse">
+                        <div class="accordion-body">
+                            <p>
+                                A periodontite é uma doença inflamatória que afeta os tecidos de suporte dos dentes, incluindo gengivas, osso alveolar e ligamento periodontal. Se não tratada, pode levar à perda de dentes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="accordion-item" id="faq-item-8">
+                    <button class="accordion-header" aria-expanded="false" id="faq-btn-8">
+                        <span class="faq-question">8. Quais são os sintomas de doença periodontal?</span>
+                        <span class="faq-icon-wrapper"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+                    <div class="accordion-collapse">
+                        <div class="accordion-body">
+                            <p>
+                                Os sintomas comuns de doença periodontal incluem gengivas vermelhas, inchadas ou sensíveis, sangramento durante a escovação ou uso do fio dental, mau hálito persistente, gosto ruim na boca e mudanças na posição dos dentes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 9 -->
+                <div class="accordion-item" id="faq-item-9">
+                    <button class="accordion-header" aria-expanded="false" id="faq-btn-9">
+                        <span class="faq-question">9. Como tratar a doença periodontal?</span>
+                        <span class="faq-icon-wrapper"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+                    <div class="accordion-collapse">
+                        <div class="accordion-body">
+                            <p>
+                                O tratamento da doença periodontal pode incluir raspagem e alisamento radicular (limpeza profunda), terapia antibiótica, cirurgia periodontal e cuidados de acompanhamento em casa. O tratamento precoce é essencial para evitar complicações graves.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 10 -->
+                <div class="accordion-item" id="faq-item-10">
+                    <button class="accordion-header" aria-expanded="false" id="faq-btn-10">
+                        <span class="faq-question">10. Qual a importância da ortodontia?</span>
+                        <span class="faq-icon-wrapper"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+                    <div class="accordion-collapse">
+                        <div class="accordion-body">
+                            <p>
+                                A ortodontia é uma especialidade da odontologia que se dedica ao diagnóstico, prevenção e tratamento das irregularidades dentárias e faciais. Além de melhorar a estética do sorriso, o tratamento ortodôntico também pode corrigir problemas funcionais e promover uma melhor saúde bucal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato & Localização -->
+    <section class="contact-section" id="contato">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Localização e Contato</span>
+                <h2 class="section-title">Venha nos Fazer uma Visita</h2>
+                <p class="section-description-top">Estamos prontos para atender você e sua família em uma localização de fácil acesso.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Info de Contato -->
+                <div class="contact-info-panel">
+                    <div class="contact-info-card">
+                        <h3>Informações de Contato</h3>
+                        
+                        <div class="info-list">
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                                <div class="info-text">
+                                    <span class="info-label">WhatsApp</span>
+                                    <a href="https://wa.me/5511944741003" target="_blank" class="info-value">(011) 94474-1003</a>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="info-text">
+                                    <span class="info-label">Telefone Fixo</span>
+                                    <a href="tel:+551126856828" class="info-value">(011) 2685-6828</a>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="info-text">
+                                    <span class="info-label">Onde Estamos</span>
+                                    <span class="info-value">
+                                        Rua Itinguçu, 1674 - Vila Ré<br>
+                                        São Paulo - SP, 03658-000
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                                <div class="info-text">
+                                    <span class="info-label">Horário de Atendimento</span>
+                                    <span class="info-value">Segunda a Sexta: 08:00 às 18:00<br>Sábado: Com agendamento prévio</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-social-icons">
+                            <a href="https://facebook.com" target="_blank" class="social-btn facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://google.com" target="_blank" class="social-btn google" aria-label="Google Business"><i class="fa-brands fa-google"></i></a>
+                            <a href="https://instagram.com" target="_blank" class="social-btn instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mapa Google Maps Incorporado -->
+                <div class="contact-map-panel">
+                    <div class="map-wrapper">
+                        <!-- Mapa iframe do Google Maps oficial para o endereço: Rua Itinguçu, 1674, São Paulo -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.455437877561!2d-46.50570072480687!3d-23.51613076008671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e26715f5d87%3A0xc34ccba247656911!2sR.%20Itingu%C3%A7u%2C%201674%20-%20Vila%20Re%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003658-000!5e0!3m2!1spt-BR!2sbr!4v1718281144000!5m2!1spt-BR!2sbr" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Localização do Consultório de Dr. Davi Rubio"
+                            id="google-maps-iframe"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-logo-desc">
+                <h3>Dr. Davi Rubio</h3>
+                <p>Odontologia Especializada. Mais de 40 anos cuidando com empatia, dedicação e precisão técnica do seu sorriso.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre o Consultório</a></li>
+                    <li><a href="#saude-bucal">Tratamentos</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#faq">Dúvidas Frequentes</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 Dr. Davi Rubio - Odontologia Especializada. Todos os direitos reservados.</p>
+            <p class="developer-tag">Desenvolvido com sofisticação e tecnologia.</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante do WhatsApp permanente -->
+    <a href="https://wa.me/5511944741003?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta+com+o+Dr.+Davi+Rubio." target="_blank" class="floating-whatsapp-btn" id="floating-whatsapp-widget" aria-label="Conversar no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="tooltip-text">Agende pelo WhatsApp!</span>
+    </a>
+
+    <!-- Custom JS -->
+    <script src="script.js?v=6"></script>
+</body>
+</html>
