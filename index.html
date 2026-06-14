@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=8">
+    <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
 
@@ -122,7 +122,7 @@
                         <div class="about-card-icon"><i class="fa-solid fa-house-medical"></i></div>
                         <h3>Consultório Moderno</h3>
                         <p>
-                            Em meu consultório, ofereço mais do que apenas um espaço equipado com as mais avançadas tecnologias. Aqui você encontra um ambiente aconchegante, projetado para proporcionar o máximo de conforto, segurança e tranquilidade durante todos os seus procedimentos.
+                            Em meu consultório, ofereço mais do que apenas um espaço equipado com as mais avançadas tecnologias aqui você encontra um profissional altamente capacitado com 40 anos de experiência sempre se atualizando com todas as novidades da Odontologia unindo experiência e inovação. Com um atendimento de excelência, focado na saúde bucal e bem-estar.
                         </p>
                     </div>
                 </div>
@@ -136,7 +136,7 @@
                         <div class="about-card-icon"><i class="fa-solid fa-user-doctor"></i></div>
                         <h3>Dr. Davi Rubio</h3>
                         <p>
-                            Não sou apenas um especialista em minha área de atuação, mas também estou em constante aprimoramento, acompanhando as mais recentes pesquisas e técnicas para garantir os melhores resultados. Destaco-me pela empatia e dedicação personalizada para cuidar de cada paciente.
+                            Não sou apenas um especialista em minha área de atuação, mas também estou em constante aprimoramento, acompanhando as mais recentes pesquisas e técnicas para garantir os melhores resultados para você, meu cliente. Tenho destaque não apenas por minhas habilidades clínicas, mas também por minha empatia e dedicação em cuidar das suas necessidades individuais.
                         </p>
                     </div>
                 </div>
@@ -172,41 +172,46 @@
                     </div>
                 </div>
                 
-                <!-- Carrossel de Fotos Antes & Depois -->
+                <!-- Galeria de Fotos Antes & Depois -->
                 <div class="treatment-interactive">
                     <div class="interactive-card">
                         <div class="interactive-card-header">
-                            <h4>Demonstração de Profilaxia</h4>
-                            <p>Confira alguns resultados reais de antes e depois</p>
+                            <h4>Confira alguns resultados reais de antes e depois</h4>
                         </div>
                         
-                        <!-- Carrossel de Antes e Depois Autoplay -->
-                        <div class="prophylaxis-carousel" id="prophylaxis-carousel">
-                            <div class="prophylaxis-carousel-inner">
-                                <div class="prophylaxis-slide active">
+                        <!-- Galeria de Antes e Depois Clicável -->
+                        <div class="prophylaxis-gallery">
+                            <div class="gallery-grid">
+                                <div class="gallery-item" data-index="0">
                                     <img src="assets/images/antes_e_depois_1.jpg?v=2" alt="Demonstração Antes e Depois 1">
+                                    <div class="gallery-item-overlay">
+                                        <i class="fa-solid fa-expand"></i>
+                                    </div>
                                 </div>
-                                <div class="prophylaxis-slide">
+                                <div class="gallery-item" data-index="1">
                                     <img src="assets/images/antes_e_depois_2.jpg?v=2" alt="Demonstração Antes e Depois 2">
+                                    <div class="gallery-item-overlay">
+                                        <i class="fa-solid fa-expand"></i>
+                                    </div>
                                 </div>
-                                <div class="prophylaxis-slide">
+                                <div class="gallery-item" data-index="2">
                                     <img src="assets/images/antes_e_depois_3.jpg?v=2" alt="Demonstração Antes e Depois 3">
+                                    <div class="gallery-item-overlay">
+                                        <i class="fa-solid fa-expand"></i>
+                                    </div>
                                 </div>
-                                <div class="prophylaxis-slide">
+                                <div class="gallery-item" data-index="3">
                                     <img src="assets/images/antes_e_depois_4.jpg?v=2" alt="Demonstração Antes e Depois 4">
+                                    <div class="gallery-item-overlay">
+                                        <i class="fa-solid fa-expand"></i>
+                                    </div>
                                 </div>
-                                <div class="prophylaxis-slide">
+                                <div class="gallery-item" data-index="4">
                                     <img src="assets/images/antes_e_depois_5.jpg?v=2" alt="Demonstração Antes e Depois 5">
+                                    <div class="gallery-item-overlay">
+                                        <i class="fa-solid fa-expand"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            
-                            <!-- Indicadores do Carrossel -->
-                            <div class="prophylaxis-indicators" id="prophylaxis-indicators">
-                                <span class="prophylaxis-dot active" data-slide="0"></span>
-                                <span class="prophylaxis-dot" data-slide="1"></span>
-                                <span class="prophylaxis-dot" data-slide="2"></span>
-                                <span class="prophylaxis-dot" data-slide="3"></span>
-                                <span class="prophylaxis-dot" data-slide="4"></span>
                             </div>
                         </div>
                     </div>
@@ -513,7 +518,7 @@
                                 <div class="info-text">
                                     <span class="info-label">Onde Estamos</span>
                                     <span class="info-value">
-                                        Rua Itinguçu, 1674 - Vila Ré<br>
+                                        Rua Itinguçu, 1674 - Vila Ré - Ao lado do METRÔ 🚇<br>
                                         São Paulo - SP, 03658-000
                                     </span>
                                 </div>
@@ -531,7 +536,6 @@
                         <div class="contact-social-icons">
                             <a href="https://facebook.com" target="_blank" class="social-btn facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                             <a href="https://google.com" target="_blank" class="social-btn google" aria-label="Google Business"><i class="fa-brands fa-google"></i></a>
-                            <a href="https://instagram.com" target="_blank" class="social-btn instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -582,6 +586,17 @@
         </div>
     </footer>
 
+    <!-- Lightbox Modal para ampliação de imagens -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Anterior">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Resultado ampliado">
+        </div>
+        <button class="lightbox-next" id="lightbox-next" aria-label="Próximo">&#10095;</button>
+        <div class="lightbox-counter" id="lightbox-counter">1 / 5</div>
+    </div>
+
     <!-- Botão Flutuante do WhatsApp permanente -->
     <a href="https://wa.me/5511944741003?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta+com+o+Dr.+Davi+Rubio." target="_blank" class="floating-whatsapp-btn" id="floating-whatsapp-widget" aria-label="Conversar no WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
@@ -589,6 +604,6 @@
     </a>
 
     <!-- Custom JS -->
-    <script src="script.js?v=8"></script>
+    <script src="script.js?v=9"></script>
 </body>
 </html>

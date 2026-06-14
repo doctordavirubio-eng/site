@@ -67,47 +67,89 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================================================
-       3. CARROSSEL DE PROFILAXIA AUTOPLAY (ANTES E DEPOIS)
+       3. GALERIA COM LIGHTBOX (ANTES E DEPOIS)
        ========================================================================== */
-    const prophCarousel = document.getElementById('prophylaxis-carousel');
-    const prophSlides = document.querySelectorAll('.prophylaxis-slide');
-    const prophDots = document.querySelectorAll('.prophylaxis-dot');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+    const lightboxCounter = document.getElementById('lightbox-counter');
     
-    if (prophCarousel && prophSlides.length > 0) {
-        let prophIndex = 0;
-        let prophTimer;
+    if (galleryItems.length > 0 && lightbox) {
+        let currentImgIndex = 0;
+        const imagesList = Array.from(galleryItems).map(item => item.querySelector('img').src);
         
-        function showProphSlide(index) {
-            prophSlides.forEach(slide => slide.classList.remove('active'));
-            prophDots.forEach(dot => dot.classList.remove('active'));
-            
-            prophSlides[index].classList.add('active');
-            if (prophDots[index]) {
-                prophDots[index].classList.add('active');
-            }
+        function openLightbox(index) {
+            currentImgIndex = index;
+            lightboxImg.src = imagesList[currentImgIndex];
+            lightboxCounter.textContent = `${currentImgIndex + 1} / ${imagesList.length}`;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Evita rolagem da página por baixo
         }
         
-        function nextProphSlide() {
-            prophIndex = (prophIndex + 1) % prophSlides.length;
-            showProphSlide(prophIndex);
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = ''; // Restaura rolagem
         }
         
-        function startProphTimer() {
-            clearInterval(prophTimer);
-            prophTimer = setInterval(nextProphSlide, 4000); // Transição a cada 4 segundos
+        function nextLightboxImg() {
+            currentImgIndex = (currentImgIndex + 1) % imagesList.length;
+            lightboxImg.src = imagesList[currentImgIndex];
+            lightboxCounter.textContent = `${currentImgIndex + 1} / ${imagesList.length}`;
         }
         
-        // Adiciona evento de clique aos dots
-        prophDots.forEach((dot, idx) => {
-            dot.addEventListener('click', () => {
-                prophIndex = idx;
-                showProphSlide(prophIndex);
-                startProphTimer();
-            });
+        function prevLightboxImg() {
+            currentImgIndex = (currentImgIndex - 1 + imagesList.length) % imagesList.length;
+            lightboxImg.src = imagesList[currentImgIndex];
+            lightboxCounter.textContent = `${currentImgIndex + 1} / ${imagesList.length}`;
+        }
+        
+        galleryItems.forEach((item, idx) => {
+            item.addEventListener('click', () => openLightbox(idx));
         });
         
-        // Inicializa o autoplay
-        startProphTimer();
+        if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+        if (lightboxNext) lightboxNext.addEventListener('click', nextLightboxImg);
+        if (lightboxPrev) lightboxPrev.addEventListener('click', prevLightboxImg);
+        
+        // Fecha ao clicar fora da imagem (na área escura)
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        
+        // Navegação pelo teclado
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextLightboxImg();
+            if (e.key === 'ArrowLeft') prevLightboxImg();
+        });
+        
+        // Suporte a gestos (Swipe) para celulares
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        lightbox.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        
+        lightbox.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+        
+        function handleSwipe() {
+            const swipeThreshold = 50; // pixels mínimos de deslocamento
+            if (touchEndX < touchStartX - swipeThreshold) {
+                nextLightboxImg(); // Deslizar para a esquerda -> Próxima foto
+            } else if (touchEndX > touchStartX + swipeThreshold) {
+                prevLightboxImg(); // Deslizar para a direita -> Foto anterior
+            }
+        }
     }
 
     /* ==========================================================================

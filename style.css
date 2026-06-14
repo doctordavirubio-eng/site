@@ -615,7 +615,7 @@ img {
    SEÇÃO SOBRE (CARDS MODERNOS)
    ========================================================================== */
 .about-section {
-    padding: 100px 0;
+    padding: 60px 0;
     background-color: var(--primary-ultra-light);
     position: relative;
 }
@@ -714,7 +714,7 @@ img {
    SEÇÃO SAÚDE BUCAL & SLIDER ANTES/DEPOIS
    ========================================================================== */
 .treatment-section {
-    padding: 100px 0;
+    padding: 60px 0;
 }
 
 .treatment-grid {
@@ -767,7 +767,7 @@ img {
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border-color);
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .interactive-card-header {
@@ -778,87 +778,194 @@ img {
 .interactive-card-header h4 {
     font-size: 1.15rem;
     color: var(--primary);
-    margin-bottom: 4px;
+    margin-bottom: 0;
 }
 
-.interactive-card-header p {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-}
-
-/* Carrossel de Profilaxia Antes/Depois */
-.prophylaxis-carousel {
-    position: relative;
+/* Galeria de Fotos Profilaxia */
+.prophylaxis-gallery {
     width: 100%;
-    height: 340px;
+    margin-top: 10px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.gallery-item {
+    position: relative;
     border-radius: var(--border-radius-md);
     overflow: hidden;
-    box-shadow: var(--shadow-md);
+    aspect-ratio: 1 / 1; /* Square thumbnails look super clean */
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
     background-color: #f1f5f9;
+    border: 1px solid var(--border-color);
+    transition: var(--transition-smooth);
 }
 
-.prophylaxis-carousel-inner {
-    position: relative;
+.gallery-item:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: var(--shadow-md);
+}
+
+.gallery-item img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.prophylaxis-slide {
+.gallery-item-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
+    background-color: rgba(15, 118, 110, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
-    transition: opacity 0.8s ease-in-out;
-    z-index: 1;
+    transition: var(--transition-fast);
+}
+
+.gallery-item:hover .gallery-item-overlay {
+    opacity: 1;
+}
+
+.gallery-item-overlay i {
+    color: white;
+    font-size: 1.3rem;
+    transform: scale(0.8);
+    transition: var(--transition-fast);
+}
+
+.gallery-item:hover .gallery-item-overlay i {
+    transform: scale(1);
+}
+
+/* Lightbox Modal */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.prophylaxis-slide.active {
-    opacity: 1;
-    z-index: 2;
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: var(--border-radius-sm);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease;
 }
 
-.prophylaxis-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
-.prophylaxis-indicators {
+.lightbox-close {
     position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-    z-index: 10;
-}
-
-.prophylaxis-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
+    top: 20px;
+    right: 25px;
+    color: #f1f5f9;
+    font-size: 40px;
+    font-weight: bold;
     cursor: pointer;
-    transition: var(--transition-smooth);
+    z-index: 2100;
+    transition: var(--transition-fast);
 }
 
-.prophylaxis-dot.active {
-    background-color: var(--primary-light);
-    width: 24px;
-    border-radius: 50px;
+.lightbox-close:hover {
+    color: var(--primary-light);
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2100;
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background-color: var(--primary);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+.lightbox-counter {
+    position: absolute;
+    bottom: 20px;
+    color: #cbd5e1;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    z-index: 2100;
+}
+
+@media (max-width: 768px) {
+    .lightbox-prev,
+    .lightbox-next {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+        background: rgba(0,0,0,0.5);
+    }
+    .lightbox-prev { left: 10px; }
+    .lightbox-next { right: 10px; }
 }
 
 /* ==========================================================================
    SEÇÃO DE DEPOIMENTOS
    ========================================================================== */
 .testimonials-section {
-    padding: 100px 0;
+    padding: 60px 0;
     background-color: var(--primary-ultra-light);
 }
 
@@ -1002,7 +1109,7 @@ img {
    SEÇÃO FAQ (ACORDEÃO COMPONENT)
    ========================================================================== */
 .faq-section {
-    padding: 100px 0;
+    padding: 60px 0;
 }
 
 .faq-container {
@@ -1097,7 +1204,7 @@ img {
    SEÇÃO CONTATO E LOCALIZAÇÃO
    ========================================================================== */
 .contact-section {
-    padding: 100px 0;
+    padding: 60px 0;
     background-color: var(--primary-ultra-light);
 }
 
